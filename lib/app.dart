@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rockola/screens/login_signup.dart';
+import 'package:rockola/constants/theme.dart';
 
 class RockolaApp extends StatefulWidget {
   const RockolaApp({Key? key}) : super(key: key);
@@ -12,9 +14,8 @@ class _RockolaAppState extends State<RockolaApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Rockola",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: RockolaThemes.getTheme(context),
+      home: const LoginSignUpScreen(),
     );
   }
 }

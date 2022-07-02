@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+enum LogoType {
+  dark,
+  light,
+}
 
 class Logo extends StatelessWidget {
   const Logo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        SvgPicture.asset(
-          "assets/svg/logo/Rockola.svg",
-          height: 100,
+        Image.asset(
+          "assets/svg/logo/Rockola.png",
+          height: 150,
         ),
-        SvgPicture.asset(
-          "assets/svg/logo/Letras.svg",
-          height: 100,
+        Image.asset(
+          "assets/svg/logo/Letras.png",
+          height: 80,
         ),
       ],
     );
